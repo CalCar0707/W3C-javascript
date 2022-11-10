@@ -19,17 +19,22 @@ document.getElementById(generate);
 
 //prompt to select pw length between 8 - 128
 function generatePassword() {
-  var userInput = window.prompt('What would you like the length of your password to be?');
+  var userInput = window.prompt('What would you like the length of your password to be? (choose between 8- 128 characters.)');
   var passwordLength = userInput;
 
-  if (passwordLength < 8 || passwordLength > 128) {
-    window.prompt('Please choose a length between 8 and 128 characters.')
-    } else {
-      console.log(passwordLength);
-    }
-}
+    console.log(passwordLength);
+ 
+  //prompt on what character  types to include
+var includeLowercase  = window.confirm('Would you like to include lowercase letters?');
+    console.log(includeLowercase);
+var includeUppercase = window.confirm('Would you like to include uppercase letter?');
+    console.log(includeUppercase);
+var includeNumbers = window.confirm('Would you like to include any numbers?)');
+    console.log(includeNumbers);
+var includeSpecials = window.confirm('Would you like to include any special characters?');
+    console.log(includeSpecials);
+  }
 
-//prompt on what character types to include
 var generateBtn = document.querySelector("#generate");
 
 
@@ -43,4 +48,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
