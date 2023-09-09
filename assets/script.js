@@ -19,7 +19,7 @@ function generatePassword() {
   if (userInput < 8 || userInput > 128) {
     window.prompt('You must pick a number between 8 and 128.')
   };
-  
+
   var passwordLength = userInput;
     console.log(passwordLength);
  
@@ -33,10 +33,25 @@ var includeNumbers = window.confirm('Would you like to include any numbers?');
 var includeSpecials = window.confirm('Would you like to include any special characters?');
     console.log(includeSpecials);
 
-    if(includeLowercase) {
+  
 
-    }
+  if (includeLowercase) {
+    finalPassword = finalPassword.concat(lowerCase);
+    console.log(finalPassword);
   }
+  if (includeUppercase) {
+    finalPassword = finalPassword.concat(upperCase);
+    console.log(finalPassword);
+  }
+  if (includeNumbers) {
+    finalPassword = finalPassword.concat(numberChoice);
+    console.log(finalPassword);
+  }
+  if (includeSpecials) {
+    finalPassword = finalPassword.concat(specialCharacters);
+    console.log(finalPassword);
+  }
+};
   
 
 
