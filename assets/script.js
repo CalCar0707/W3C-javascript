@@ -13,7 +13,8 @@ var finalPassword = '';
 function generatePassword() {
   var userInput = window.prompt('What would you like the length of your password to be? (choose between 8- 128 characters.)');
   if (userInput < 8 || userInput > 128) {
-    window.prompt('You must pick a number between 8 and 128.')
+    window.alert('You must pick a number between 8 and 128.');
+  var userInput = window.prompt('What would you like the length of your password to be? (choose between 8- 128 characters.)');
   };
 
   var passwordLength = userInput;
