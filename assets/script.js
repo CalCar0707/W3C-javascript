@@ -1,4 +1,3 @@
-// ***Assignment starter code***
 var generateBtn = document.querySelector('#generate');
 
 // global variables here
@@ -7,11 +6,7 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var numberChoice = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = ['~','!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+'];
 var tempPassword = [];
-var finalPassword = [];
-
-
-// document.getElementById('password');
-// document.getElementById('generate');
+var finalPassword = '';
 
 
 //prompt to select pw length between 8 - 128
@@ -52,11 +47,15 @@ var includeSpecials = window.confirm('Would you like to include any special char
     tempPassword = tempPassword.concat(specialCharacters);
     console.log(tempPassword);
   }
-};
   
+for(var i = 0; i < passwordLength; i++) {
+    finalPassword = finalPassword + tempPassword[Math.floor(Math.random() * tempPassword.length)];
+}
+  return finalPassword;
+};
 
 
-// Write password to the #password input, ***assignment starter code***
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -65,6 +64,6 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button, ***assignment starter code***
+// Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
