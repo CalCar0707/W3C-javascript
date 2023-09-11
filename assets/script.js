@@ -6,8 +6,9 @@ var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var numberChoice = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = ['~','!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+'];
+var tempPassword = [];
 var finalPassword = [];
-var tempPassword;
+
 
 // document.getElementById('password');
 // document.getElementById('generate');
@@ -36,20 +37,20 @@ var includeSpecials = window.confirm('Would you like to include any special char
   
 
   if (includeLowercase) {
-    finalPassword = finalPassword.concat(lowerCase);
-    console.log(finalPassword);
+    tempPassword = tempPassword.concat(lowerCase);
+    console.log(tempPassword);
   }
   if (includeUppercase) {
-    finalPassword = finalPassword.concat(upperCase);
-    console.log(finalPassword);
+    tempPassword = tempPassword.concat(upperCase);
+    console.log(tempPassword);
   }
   if (includeNumbers) {
-    finalPassword = finalPassword.concat(numberChoice);
-    console.log(finalPassword);
+    tempPassword = tempPassword.concat(numberChoice);
+    console.log(tempPassword);
   }
   if (includeSpecials) {
-    finalPassword = finalPassword.concat(specialCharacters);
-    console.log(finalPassword);
+    tempPassword = tempPassword.concat(specialCharacters);
+    console.log(tempPassword);
   }
 };
   
@@ -67,22 +68,3 @@ function writePassword() {
 // Add event listener to generate button, ***assignment starter code***
 generateBtn.addEventListener('click', writePassword);
 
-// if (includeLowercase) {
-//add lowercase to password generated
-// } else {
-// do not add lowercase
-//}
-
-//if(includeUppercase) {
-  //add uppercase to pasword generated
-//} else {
-  //do not add uppercase
-//}
-
-// if (includeNumbers) {
-//   add numbers to password
-// } else {
-//   do not add numbers
-// }
-
-//  
