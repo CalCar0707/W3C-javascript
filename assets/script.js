@@ -30,7 +30,18 @@ var includeNumbers = window.confirm('Would you like to include any numbers?');
 var includeSpecials = window.confirm('Would you like to include any special characters?');
     console.log(includeSpecials);
 
-  
+if ( includeLowercase === false && includeUppercase === false &&
+    includeNumbers === false && includeSpecials === false) {
+      window.alert('You must choose at least one option.');
+      var includeLowercase  = window.confirm('Would you like to include lowercase letters?');
+    console.log(includeLowercase);
+var includeUppercase = window.confirm('Would you like to include uppercase letter?');
+    console.log(includeUppercase);
+var includeNumbers = window.confirm('Would you like to include any numbers?');
+    console.log(includeNumbers);
+var includeSpecials = window.confirm('Would you like to include any special characters?');
+    console.log(includeSpecials);
+    };
 
   if (includeLowercase) {
     tempPassword = tempPassword.concat(lowerCase);
